@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sugar Identifier — Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for Sugar Identifier." />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="container" id="top">
+      <header class="topbar">
+        <div class="brand">
+          <span class="dot" aria-hidden="true"></span>
+          <h1>Sugar Identifier</h1>
+        </div>
+        <nav class="nav" aria-label="Legal navigation">
+          <a class="pill active" href="./">Privacy</a>
+          <a class="pill" href="../terms/">Terms</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <h2>Privacy Policy</h2>
+        <p>We keep this simple: we only use data to make the app work.</p>
+      </section>
+
+      <section class="card">
+        <div class="meta">
+          <span class="tag">Last updated: December 29, 2025</span>
+          <span class="tag">Contact: <a href="mailto:anthonyvvza@gmail.com">anthonyvvza@gmail.com</a></span>
+        </div>
+
+        <h3>1. What this app does</h3>
+        <ul>
+          <li>You scan a barcode.</li>
+          <li>We try to find nutrition + ingredients from a public food database.</li>
+          <li>We use AI to spot hidden sugar words in the ingredients.</li>
+        </ul>
+
+        <h3>2. What we collect</h3>
+        <ul>
+          <li><strong>Barcode you scan</strong> (the numbers).</li>
+          <li><strong>Product info</strong> we fetch (name, sugar per 100g, serving size, ingredients text, if available).</li>
+          <li><strong>AI request data</strong> we send for analysis (product name + ingredients text + sugar numbers).</li>
+          <li><strong>Purchase info</strong> (if you buy Pro): subscription/entitlement status. Payments are handled by Apple. We use RevenueCat to manage purchase status.</li>
+          <li><strong>Basic app info</strong> (like errors) so we can fix bugs.</li>
+        </ul>
+
+        <h3>3. What we do NOT collect</h3>
+        <ul>
+          <li>We do not ask for your name, address, or phone number.</li>
+          <li>We do not sell your data.</li>
+          <li>We do not track you across other apps.</li>
+        </ul>
+
+        <h3>4. Where your data goes</h3>
+        <ul>
+          <li><strong>On your device:</strong> your scan history is stored locally on your phone (so you can see it again).</li>
+          <li>
+            <strong>Open Food Facts:</strong> we look up products by barcode using the Open Food Facts API (public database).
+          </li>
+          <li>
+            <strong>Supabase (Edge Function):</strong> the app sends the barcode + product fields to our server endpoint to run the AI step.
+          </li>
+          <li>
+            <strong>OpenAI:</strong> the Supabase function sends the ingredients text to OpenAI to generate a simple JSON analysis.
+          </li>
+          <li>
+            <strong>Apple / RevenueCat:</strong> purchase status is checked using Apple’s systems and RevenueCat.
+          </li>
+        </ul>
+
+        <h3>5. How we use data</h3>
+        <ul>
+          <li>Show sugar numbers (per 100g and per serving when available).</li>
+          <li>Highlight hidden sugar words and sweeteners in ingredients.</li>
+          <li>Keep your scan history on-device.</li>
+          <li>Run subscriptions (Pro).</li>
+          <li>Fix bugs and improve reliability.</li>
+        </ul>
+
+        <h3>6. Data control (delete / reset)</h3>
+        <ul>
+          <li>In the app, you can use <strong>Delete account</strong> to clear local app data on this device.</li>
+          <li>This removes scan history and resets onboarding on your phone.</li>
+        </ul>
+
+        <h3>7. Security</h3>
+        <ul>
+          <li>We use HTTPS (encryption in transit) for network calls.</li>
+          <li>No system is perfect — keep your device secure and up to date.</li>
+        </ul>
+
+        <h3>8. Children</h3>
+        <ul>
+          <li>This app is not made for kids under 13.</li>
+          <li>If you think a child sent data, email us and we’ll help.</li>
+        </ul>
+
+        <h3>9. Changes</h3>
+        <ul>
+          <li>If we change this policy, we’ll update the date above.</li>
+        </ul>
+      </section>
+
+      <footer class="footer">
+        <span class="small">© <span data-year></span> Sugar Identifier</span>
+        <div style="display:flex; gap:10px; align-items:center;">
+          <a class="pill" href="../terms/">Terms</a>
+          <button class="btn" data-top>Back to top</button>
+        </div>
+      </footer>
+    </div>
+
+    <script src="../app.js"></script>
+  </body>
+</html>
