@@ -1,0 +1,19 @@
+.DS_Store
+
+# Xcode / iOS
+DerivedData/
+.derivedData/
+.derivedDataBuild/
+*.xcresult
+*.xcuserstate
+*.xcuserdatad
+*.xcuserdata/
+*.xcodeproj/
+*.xcworkspace/
+
+# SwiftPM
+.swiftpm/
+
+# Build outputs
+build/
+
